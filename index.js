@@ -6,6 +6,7 @@ const cloudinary = require('cloudinary').v2;
 const productRoutes = require('./routes/products');
 const authRoutes = require('./routes/auth');
 const uploadRoutes = require('./routes/upload');
+const settingsRoutes = require('./routes/settings');
 
 // Load environment variables first
 dotenv.config();
@@ -55,6 +56,7 @@ mongoose
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/settings', settingsRoutes);
 
 app.get('/', (req, res) => {
   res.json({
