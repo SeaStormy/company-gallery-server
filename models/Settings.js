@@ -10,18 +10,98 @@ const settingsSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    sections: {
+      contactInfo: {
+        title: {
+          type: String,
+          required: false,
+        },
+        address: {
+          en: {
+            type: String,
+            required: false,
+          },
+          vi: {
+            type: String,
+            required: false,
+          },
+        },
+        phone: {
+          type: String,
+          required: false,
+        },
+        email: {
+          type: String,
+          required: false,
+        },
+      },
+      workingHours: {
+        title: {
+          type: String,
+          required: false,
+        },
+        weekdays: {
+          en: {
+            type: String,
+            required: false,
+          },
+          vi: {
+            type: String,
+            required: false,
+          },
+        },
+        saturday: {
+          en: {
+            type: String,
+            required: false,
+          },
+          vi: {
+            type: String,
+            required: false,
+          },
+        },
+        sunday: {
+          en: {
+            type: String,
+            required: false,
+          },
+          vi: {
+            type: String,
+            required: false,
+          },
+        },
+      },
+    },
     landingPageTitle: {
-      type: String,
-      required: false,
+      en: {
+        type: String,
+        required: false,
+      },
+      vi: {
+        type: String,
+        required: false,
+      },
     },
     landingPageDescription: {
-      type: String,
-      required: false,
+      en: {
+        type: String,
+        required: false,
+      },
+      vi: {
+        type: String,
+        required: false,
+      },
     },
     notification: {
       text: {
-        type: String,
-        required: false,
+        en: {
+          type: String,
+          required: false,
+        },
+        vi: {
+          type: String,
+          required: false,
+        },
       },
       isActive: {
         type: Boolean,
